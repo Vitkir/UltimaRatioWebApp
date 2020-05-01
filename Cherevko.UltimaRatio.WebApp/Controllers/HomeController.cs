@@ -18,20 +18,29 @@ namespace Cherevko.UltimaRatio.WebApp.Controllers
 			_logger = logger;
 		}
 
-		public IActionResult Index()
+		public IActionResult AboutUs()
 		{
 			return View();
 		}
 
-		public IActionResult Privacy()
+		public IActionResult Photos()
 		{
 			return View();
 		}
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-		public IActionResult Error()
+		public IActionResult Hema()
 		{
-			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+			return View();
+		}
+
+		public IActionResult Links()
+		{
+			return View();
+		}
+
+		public IActionResult Contacts()
+		{
+			return View();
 		}
 	}
 }

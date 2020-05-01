@@ -1,4 +1,7 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿/// <reference path="../lib/jquery/dist/jquery.js" />
 
-// Write your JavaScript code.
+
+$(".menu-main").click(function (event) {
+	$($(".menu-main").find(".current").first()).removeClass("current");
+	$(event.target).addClass("current");
+});
