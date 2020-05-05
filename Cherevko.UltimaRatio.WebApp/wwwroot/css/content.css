@@ -6,3 +6,13 @@
 	.content p {
 		color: #7c7c7d;
 	}
+
+	.content a {
+		color: #7c7c7d;
+		text-decoration: none;
+	}
+
+	.content a:hover {
+		color: #7c7c7d;
+		text-decoration: underline;
+	}
