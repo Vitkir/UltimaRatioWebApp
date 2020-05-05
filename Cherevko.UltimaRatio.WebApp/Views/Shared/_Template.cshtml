@@ -8,16 +8,17 @@
 	<link rel="stylesheet" href="~/css/site.css" />
 	<link rel="stylesheet" href="~/css/common.css" />
 	<link rel="stylesheet" href="~/css/content.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
 	<header>
 		<img src="@Url.Content("~/Content/logo.jpg")" alt="@ViewData["Title"]" />
 		<ul class="menu-main">
-			<li>@Html.ActionLink("О Нас", "AboutUs")</li>
-			<li>@Html.ActionLink("Фотографии", "Photos")</li>
-			<li>@Html.ActionLink("Hema", "Hema")</li>
-			<li>@Html.ActionLink("Ссылки", "Links")</li>
-			<li>@Html.ActionLink("Контакты", "Contacts")</li>
+			<li><a href="/Home/AboutUs">О Нас</a></li>
+			<li><a href="/Home/Photos">Фотографии</a></li>
+			<li><a href="/Home/Hema">Hema</a></li>
+			<li><a href="/Home/Links">Ссылки</a></li>
+			<li><a href="/Home/Contacts">Контакты</a></li>
 		</ul>
 	</header>
 	<div class="container">
@@ -26,7 +27,13 @@
 		</main>
 	</div>
 	<footer class="border-top footer text-muted">
-		<div class="container">
+		<div class="footer">
+			<a href="https://vk.com/ultima_ratio_hema" target="_blank">
+			<i class="fa fa-vk"></i>
+			</a>
+			<a href="https://www.instagram.com/ultimaratio_hema/" target="_blank">
+				<i class="fa fa-instagram"></i>
+			</a>
 		</div>
 	</footer>
 	<script src="~/lib/jquery/dist/jquery.js"></script>
