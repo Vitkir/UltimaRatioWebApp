@@ -101,6 +101,9 @@ hr {
 
 .footer {
 	text-align: center;
+	position: fixed;
+	bottom: 0;
+	background: #000000;
 }
 
 	.footer a {

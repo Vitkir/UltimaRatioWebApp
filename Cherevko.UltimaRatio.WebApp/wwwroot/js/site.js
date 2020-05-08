@@ -1,7 +1,5 @@
 ﻿/// <reference path="../lib/jquery/dist/jquery.js" />
 
-
-
 $(function () {
 	var location = window.location.href,
 		cur_url = (location.split('/').pop());
