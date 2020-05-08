@@ -1,8 +1,27 @@
-﻿
+﻿@model IEnumerable<Cherevko.UltimaRatio.WebApp.Models.VkPhotoModel>
+
 @{
-    ViewData["Title"] = "Content";
-    Layout = "~/Views/Shared/_Template.cshtml";
+	ViewData["Title"] = "photos";
+	Layout = "~/Views/Shared/_Template.cshtml";
 }
 
-<h1>Content</h1>
-
+@section Stylesheets{
+	<link href="~/css/modalViewport.css" rel="stylesheet" />
+}
+<div class="container content @ViewData["Title"]">
+	<div class="img_collection">
+		@foreach (var item in Model)
+		{
+			var small = item.Sizes.Where(e => e.Type == "p")
+				.Select(e => e.Url)
+				.First();
+			var big = item.Sizes.Where(e => e.Type == "z")
+				.Select(e => e.Url)
+				.DefaultIfEmpty(small).First();
+		<img src="@small" onclick="openImg('@big')"/>
+		}
+	</div>
+</div>
+@section Scripts{
+	<script src="~/js/modalViewport.js"></script>
+}

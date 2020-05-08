@@ -12,7 +12,21 @@
 		text-decoration: none;
 	}
 
-	.content a:hover {
-		color: #7c7c7d;
-		text-decoration: underline;
+		.content a:hover {
+			color: #7c7c7d;
+			text-decoration: underline;
+		}
+
+.img_collection img {
+	width: 185px;
+	height: auto;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	vertical-align: top;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+	.img_collection img:hover {
+		opacity: 1;
 	}
