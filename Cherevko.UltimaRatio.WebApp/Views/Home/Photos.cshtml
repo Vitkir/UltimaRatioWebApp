@@ -3,6 +3,7 @@
 @{
 	ViewData["Title"] = "photos";
 	Layout = "~/Views/Shared/_Template.cshtml";
+	var photoCount = 0;
 }
 
 @section Stylesheets{
@@ -18,10 +19,18 @@
 			var big = item.Sizes.Where(e => e.Type == "z")
 				.Select(e => e.Url)
 				.DefaultIfEmpty(small).First();
-		<img src="@small" onclick="openImg('@big')"/>
+			if (photoCount <= 10)
+			{
+				<img src="@small" onclick="openImg('@big')" />
+			}
+			else
+			{
+				<img data-src="@small" onclick="openImg('@big')" class="lazy" />
+			}
+			photoCount++;
 		}
 	</div>
 </div>
 @section Scripts{
-	<script src="~/js/modalViewport.js"></script>
+	<script src="~/js/lazyLoadPhotos.js"></script>
 }

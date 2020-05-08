@@ -17,6 +17,11 @@
 			text-decoration: underline;
 		}
 
+		.content.contacts{
+			display:block;
+			text-align:center;
+		}
+
 .img_collection img {
 	width: 185px;
 	height: auto;
