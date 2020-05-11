@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Company>UltimaRatio</Company>
+    <Authors>Cherevko</Authors>
   </PropertyGroup>
 
   <ItemGroup>
